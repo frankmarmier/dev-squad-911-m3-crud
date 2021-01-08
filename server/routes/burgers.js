@@ -29,7 +29,7 @@ router.get("/:id", (req, res, next) => {
 // http://localhost:4000/api/burgers/{some-id}
 router.patch("/:id", (req, res, next) => {
   // Update a specific burger
-  Burger.findByIdAndUpdate(req.params.id, req.body)
+  Burger.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then((burgerDocument) => {
       res.status(200).json(burgerDocument);
       // There's a trap !
@@ -54,7 +54,7 @@ router.post("/", (req, res, next) => {
 // http://localhost:4000/api/burgers/{some-id}
 router.delete("/:id", (req, res, next) => {
   // Deletes a burger
-  Burger.findByIdAndDelete(req.params.id)
+  Burger.findByIdAndRemove(req.params.id)
     .then((burgerDocument) => {
       // res.sendStatus(204)
       res.status(204).json({
