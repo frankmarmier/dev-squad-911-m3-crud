@@ -1,5 +1,6 @@
 import React from "react";
 import TableBurgers from "../Components/TableBurgers";
+
 const Dashboard = () => {
   return (
     <div>

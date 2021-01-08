@@ -14,6 +14,10 @@ class ApiHandler {
   post(endPoint, data) {
     return this.service.post(endPoint, data);
   }
+  //  http://localhost:4000/api/burgers/55fejafoiajeoifafoaeee
+  delete(endPoint) {
+    return this.service.delete(endPoint); //
+  }
 }
 
 export default ApiHandler;

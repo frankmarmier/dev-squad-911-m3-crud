@@ -10,7 +10,6 @@ class FromBurger extends React.Component {
     name: "",
     price: 0,
     image: "",
-    error: {},
   };
 
   handleChange = (event) => {
