@@ -1,6 +1,6 @@
 import React from "react";
 import ApiHandler from "../api/apiHandler";
-
+import { Link } from "react-router-dom";
 const api = new ApiHandler();
 
 class TableBurgers extends React.Component {
@@ -77,7 +77,9 @@ class TableBurgers extends React.Component {
                   />
                 </td>
                 <td>
-                  <button>Edit</button>
+                  <Link to={`/admin/burger-form/${burger._id}/edit`}>
+                    <button>Edit</button>
+                  </Link>
                 </td>
                 <td>
                   <button onClick={() => this.handleDelete(burger._id)}>

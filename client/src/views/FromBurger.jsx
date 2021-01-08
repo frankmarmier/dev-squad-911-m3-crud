@@ -29,6 +29,7 @@ class FromBurger extends React.Component {
         price: this.state.price,
         image: this.state.image,
       })
+
       .then((apiResponse) => {
         console.log(apiResponse);
       })
